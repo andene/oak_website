@@ -10,7 +10,6 @@ body {
 .menu {
   background-color: #22313f;
   font-weight: 200;
-  padding-top: 1rem;
   padding-bottom: 0; }
   .menu h1 {
     padding: 0;
@@ -18,21 +17,58 @@ body {
     display: inline;
     float: left;
     color: #EB9532;
-    font-size: 1.375em; }
+    font-size: 1.375rem;
+    padding-top: 0.8125rem; }
+    .menu h1 a {
+      color: #eb9532; }
   .menu .primaryMenu {
     float: right;
-    list-style: none; }
+    list-style: none;
+    margin: 0; }
     .menu .primaryMenu li {
-      float: left;
-      margin-right: 1rem; }
+      float: left; }
       .menu .primaryMenu li a {
+        height: 60px;
         color: #fff;
-        text-decoration: none; }
+        text-decoration: none;
+        padding-top: 0.9375rem;
+        display: block;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem; }
+      .menu .primaryMenu li.active a {
+        display: block;
+        background: #eb9532; }
 
 h2 {
   color: #C0392B; }
 
+.content-container {
+  margin: 2.5rem auto 1.25rem auto;
+  background-color: #fff; }
+
 .content {
-  margin: 2.5em auto 0.625em auto;
-  background-color: #fff;
-  padding: 1.875em; }
+  padding: 1.875rem;
+  color: #565656; }
+
+.welcome {
+  height: 300px;
+  background-color: #C0392B;
+  padding: 2.5rem;
+  text-align: center; }
+  .welcome h2 {
+    font-size: 2.625rem;
+    text-shadow: 0px 1px 1px #4a2b07;
+    color: #fff;
+    font-weight: 200; }
+  .welcome .button {
+    background-color: #eb9532;
+    border-bottom: 0.125rem solid #78460c; }
+  .welcome p {
+    color: #fff;
+    text-shadow: 0px 1px 1px #4a2b07;
+    font-size: 1.375rem;
+    font-weight: 200; }
+
+.footer {
+  padding: 0 1.875rem;
+  color: #978f7e; }

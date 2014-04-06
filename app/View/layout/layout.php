@@ -16,7 +16,7 @@
         <div class="menu">
             <div class="row">
                 <div class="small-12">
-                    <h1>Oak Framework</h1>
+                    <h1><a href="/">Oak Framework</a></h1>
                     <nav class="top-bar" data-topbar data-options="sticky_on: large">
                         @include('partial.menu')
                     </nav>
@@ -24,16 +24,14 @@
             </div>
         </div>
 
-        <div class="row content">
-            <div class="small-12">
+        <div class="row content-container">
+            <div class="small-12 reset">
                 {{layout_content}}
             </div>
         </div>
 
-    <div class="row">
-        <footer class="small-12 ">
-            @include('partial.footer')
-        </footer>
+    <div class="row footer">
+        @include('partial.footer')
     </div>
 
     <script src="js/main.js"></script>

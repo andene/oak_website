@@ -1,6 +1,5 @@
 <ul class="primaryMenu">
-    <li><a href="/">Start</a></li>
-    <li><a href="/help">Hjälp</a></li>
-    <li><a href="/user/MrOak/123">User Route With param</a></li>
-    <li><a href="/test/param1/param2">Closure Route</a></li>
+    <li <?php echo ($this->requestUri == '') ? "class='active'" : "";?>><a href="/">Start</a></li>
+    <li <?php echo ($this->requestUri == 'docs') ? "class='active'" : "";?>><a href="/docs">Documentation</a></li>
+    <li <?php echo ($this->requestUri == 'about') ? "class='active'" : "" ;?>><a href="/about">About</a></li>
 </ul>

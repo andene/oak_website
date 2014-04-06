@@ -1,11 +1,12 @@
 // Vars
+$colorLogoHeader: #EB9532;
 $colorBackground: #F2F1EF;
 $colorContainerBackground: #fff;
 $colorMenuBackground: #22313F;
 
 //Functions
 @function calculateEm($sizeValue, $context: 16) {
-  @return ($sizeValue / $context) *1em;
+  @return ($sizeValue / $context) *1rem;
 }
 
 body,
@@ -21,7 +22,6 @@ body {
 .menu {
     background-color: $colorMenuBackground;
     font-weight: 200;
-    padding-top: 1rem;
     padding-bottom:0;
 
     h1 {
@@ -31,19 +31,36 @@ body {
         float:left;
         color: #EB9532;
         font-size: calculateEm(22);
+        padding-top: calculateEm(13);
+
+        a {
+            color: $colorLogoHeader;
+        }
     }
 
     .primaryMenu {
         float:right;
         list-style:none;
-
+        margin:0;
         li{
             float:left;
-            margin-right: 1rem;
 
             a {
+                height: 60px;
                 color: #fff;
                 text-decoration:none;
+                padding-top: calculateEm(15);
+                display:block;
+                padding-left: calculateEm(20);
+                padding-right: calculateEm(20);
+            }
+
+            &.active {
+                a {
+                    display:block;
+                    background:  $colorLogoHeader;
+
+                }
             }
         }
 
@@ -53,8 +70,45 @@ body {
 h2 {
     color:#C0392B;
 }
-.content {
-    margin: calculateEm(40) auto calculateEm(10) auto;
+.content-container {
+    margin: calculateEm(40) auto calculateEm(20) auto;
     background-color: #fff;
+
+}
+.content {
     padding: calculateEm(30);
+    color: #565656;
+}
+
+.welcome {
+    height: 300px;
+    background-color: #C0392B;
+    padding: calculateEm(40);
+    text-align:center;
+
+    h2 {
+        font-size:calculateEm(42);
+        text-shadow:0px 1px 1px darken($colorLogoHeader, 40%);
+        color: #fff;
+        font-weight: 200;
+    }
+
+    .button {
+        background-color: $colorLogoHeader;
+        border-bottom: calculateEm(2) solid darken($colorLogoHeader, 30%);
+
+    }
+    p {
+        color: #fff;
+        text-shadow:0px 1px 1px darken($colorLogoHeader, 40%);
+        font-size: calculateEm(22);
+        font-weight: 200;
+    }
+
+}
+
+.footer {
+    padding: 0 calculateEm(30);
+    color: darken($colorBackground, 40%);
+
 }
