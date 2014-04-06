@@ -3,7 +3,7 @@
 use \Oak\Controller\Basecontroller;
 use \Oak\View\View;
 
-class DocsController extends BaseController {
+class DocsController extends \Oak\Controller\BaseController {
 
 public function __construct():void {
     parent::__construct();
