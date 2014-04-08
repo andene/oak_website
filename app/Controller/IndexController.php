@@ -24,14 +24,14 @@ class IndexController extends \Oak\Controller\BaseController {
     }
 
     public function about() :\Oak\View\View {
-
         $r = \Container::get('request');
 
         $view = new \Oak\View\View('index.about');
 
+        $title = "About Oak Framework";
         $headline = "About";
 
-        $view->with('title', $this->title)
+        $view->with('title', $title)
              ->with('headline', $headline)
              ->with('requestUri' , $this->request->getRequestUri());
 

@@ -3,6 +3,7 @@ $colorLogoHeader: #EB9532;
 $colorBackground: #F2F1EF;
 $colorContainerBackground: #fff;
 $colorMenuBackground: #22313F;
+$colorDarkRed: #C0392B;
 
 //Functions
 @function calculateEm($sizeValue, $context: 16) {
@@ -78,6 +79,14 @@ h2 {
 .content {
     padding: calculateEm(30);
     color: #565656;
+
+    p {
+        line-height: calculateEm(24);
+    }
+
+    h3, h4 {
+        margin: 0 0 calculateEm(10) 0;
+    }
 }
 
 .welcome {
@@ -106,9 +115,43 @@ h2 {
     }
 
 }
+.docsMenuContainer  {
+
+}
+.docsMenu {
+    list-style:none;
+    padding: 0;
+    margin-left: 0;
+    margin-top:calculateEm(15);
+
+
+    li {
+        padding:0;
+        border-bottom: 1px solid $colorBackground;
+
+        strong {
+            font-weight: bold;
+            color: $colorMenuBackground;
+        }
+
+        a {
+            font-size:calculateEm(15);
+        }
+    }
+}
+
 
 .footer {
     padding: 0 calculateEm(30);
     color: darken($colorBackground, 40%);
+    font-weight: 200;
+    margin-bottom: calculateEm(30);
+    a {
+        color: $colorDarkRed;
+    }
 
+}
+
+pre {
+    margin-bottom: calculateEm(50);
 }

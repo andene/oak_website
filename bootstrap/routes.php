@@ -8,6 +8,14 @@ $routes->addRoute(new Route('/', 'index', 'index'));
 $routes->addRoute(new Route('about', 'index', 'about'));
 $routes->addRoute(new Route('docs', 'docs', 'index'));
 
+$routes->addRoute(new Route('docs/routes', 'docs', 'one'));
+$routes->addRoute(new Route('docs/controller', 'docs', 'controller'));
+$routes->addRoute(new Route('docs/filestructure', 'docs', 'filestructure'));
+$routes->addRoute(new Route('docs/view-partials-layouts', 'docs', 'view'));
+$routes->addRoute(new Route('docs/misc', 'docs', 'misc'));
+
+
+
 /*$routes->addRoute(new Route('test/{param1}/{param2}', function($param1, $param2) {
 
 $view = new \Oak\View\View('index.index');
