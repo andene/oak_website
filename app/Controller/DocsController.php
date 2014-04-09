@@ -17,6 +17,7 @@ public function __construct():void {
 
         $view = new View('docs.index');
         $view->with('headline', 'Documentation')
+             ->with('title', "Oak Framework documentation")
              ->with('requestUri' , $this->request->getRequestUri());
 
         return $view;
