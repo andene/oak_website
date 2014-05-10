@@ -23,6 +23,18 @@ Container::set('routes', $routes);
 </pre>
 
 
+<pre class="prettyprint">
+//controller
+
+public function index() {
+	
+	//Get requestUri
+	echo $this->request()->getRequestUri();
+}
+
+</pre>
+
+
 </div>
 </div>
 
